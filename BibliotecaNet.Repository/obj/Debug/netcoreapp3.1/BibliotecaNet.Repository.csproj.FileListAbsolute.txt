@@ -1,0 +1,14 @@
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\obj\Debug\netcoreapp3.1\BibliotecaNet.Repository.csprojAssemblyReference.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\obj\Debug\netcoreapp3.1\BibliotecaNet.Repository.AssemblyInfoInputs.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\obj\Debug\netcoreapp3.1\BibliotecaNet.Repository.AssemblyInfo.cs
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\obj\Debug\netcoreapp3.1\BibliotecaNet.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\bin\Debug\netcoreapp3.1\BibliotecaNet.Repository.deps.json
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\bin\Debug\netcoreapp3.1\BibliotecaNet.Repository.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\bin\Debug\netcoreapp3.1\BibliotecaNet.Repository.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\bin\Debug\netcoreapp3.1\BibliotecaNet.Domain.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\bin\Debug\netcoreapp3.1\BibliotecaNet.Domain.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\obj\Debug\netcoreapp3.1\BibliotecaNet.Repository.csproj.CopyComplete
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\obj\Debug\netcoreapp3.1\BibliotecaNet.Repository.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Repository\obj\Debug\netcoreapp3.1\BibliotecaNet.Repository.pdb

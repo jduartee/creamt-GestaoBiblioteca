@@ -1,0 +1,17 @@
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\bin\Debug\netcoreapp3.1\BibliotecaNet.Tests.deps.json
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\bin\Debug\netcoreapp3.1\BibliotecaNet.Tests.runtimeconfig.json
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\bin\Debug\netcoreapp3.1\BibliotecaNet.Tests.runtimeconfig.dev.json
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\bin\Debug\netcoreapp3.1\BibliotecaNet.Tests.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\bin\Debug\netcoreapp3.1\BibliotecaNet.Tests.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\bin\Debug\netcoreapp3.1\BibliotecaNet.Domain.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\bin\Debug\netcoreapp3.1\BibliotecaNet.Domain.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\obj\Debug\netcoreapp3.1\BibliotecaNet.Tests.csprojAssemblyReference.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\obj\Debug\netcoreapp3.1\BibliotecaNet.Tests.AssemblyInfoInputs.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\obj\Debug\netcoreapp3.1\BibliotecaNet.Tests.AssemblyInfo.cs
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\obj\Debug\netcoreapp3.1\BibliotecaNet.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\obj\Debug\netcoreapp3.1\BibliotecaNet.Tests.csproj.CopyComplete
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\obj\Debug\netcoreapp3.1\BibliotecaNet.Tests.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\obj\Debug\netcoreapp3.1\BibliotecaNet.Tests.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Tests\obj\Debug\netcoreapp3.1\BibliotecaNet.Tests.genruntimeconfig.cache

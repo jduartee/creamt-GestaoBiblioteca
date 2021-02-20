@@ -1,0 +1,9 @@
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Validation\bin\Debug\netcoreapp3.1\BibliotecaNet.Validation.deps.json
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Validation\bin\Debug\netcoreapp3.1\BibliotecaNet.Validation.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Validation\bin\Debug\netcoreapp3.1\BibliotecaNet.Validation.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Validation\obj\Debug\netcoreapp3.1\BibliotecaNet.Validation.csprojAssemblyReference.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Validation\obj\Debug\netcoreapp3.1\BibliotecaNet.Validation.AssemblyInfoInputs.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Validation\obj\Debug\netcoreapp3.1\BibliotecaNet.Validation.AssemblyInfo.cs
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Validation\obj\Debug\netcoreapp3.1\BibliotecaNet.Validation.csproj.CoreCompileInputs.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Validation\obj\Debug\netcoreapp3.1\BibliotecaNet.Validation.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Validation\obj\Debug\netcoreapp3.1\BibliotecaNet.Validation.pdb

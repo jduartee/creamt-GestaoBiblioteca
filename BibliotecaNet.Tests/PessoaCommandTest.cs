@@ -17,7 +17,7 @@ namespace BibliotecaNet.Tests
             {
                 var mappingConfig = new MapperConfiguration(mc =>
                 {
-                    mc.CreateMap<PessoaCadastroCommand, Pessoa>();
+                    mc.CreateMap<PessoaCadastrarCommand, Pessoa>();
                 });
                 IMapper mapper = mappingConfig.CreateMapper();
                 _mapper = mapper;

@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 namespace BibliotecaNet.Domain.Command.Pessoa
 {
-    public class PessoaCadastroCommand : IRequest<int>
+    public class PessoaCadastrarCommand : IRequest<int>
     {
         private readonly IMapper _mapper;
 
-        public PessoaCadastroCommand(IMapper mapper)
+        public PessoaCadastrarCommand(IMapper mapper)
         { _mapper = mapper; }
 
-        public PessoaCadastroCommand(string nome, int pessoaTipoId, IMapper mapper)
+        public PessoaCadastrarCommand(string nome, int pessoaTipoId, IMapper mapper)
         {
             Nome = nome;
             PessoaTipoId = pessoaTipoId;

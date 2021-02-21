@@ -1,11 +1,11 @@
-C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.dll
-C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\obj\Debug\netcoreapp3.1\BibliotecaNet.Domain.csprojAssemblyReference.cache
-C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\obj\Debug\netcoreapp3.1\BibliotecaNet.Domain.AssemblyInfoInputs.cache
-C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\obj\Debug\netcoreapp3.1\BibliotecaNet.Domain.AssemblyInfo.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\bin\Debug\netcoreapp3.1\BibliotecaNet.Domain.deps.json
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\bin\Debug\netcoreapp3.1\BibliotecaNet.Domain.dll
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\bin\Debug\netcoreapp3.1\BibliotecaNet.Domain.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.dll
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.pdb
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\obj\Debug\netcoreapp3.1\BibliotecaNet.Domain.csprojAssemblyReference.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\obj\Debug\netcoreapp3.1\BibliotecaNet.Domain.AssemblyInfoInputs.cache
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\obj\Debug\netcoreapp3.1\BibliotecaNet.Domain.AssemblyInfo.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\obj\Debug\netcoreapp3.1\BibliotecaNet.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\obj\Debug\netcoreapp3.1\BibliotecaNet.Domain.csproj.CopyComplete
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Entity\obj\Debug\netcoreapp3.1\BibliotecaNet.Domain.dll

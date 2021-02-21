@@ -33,10 +33,10 @@ namespace ConsoleTeste
                 _mapper = mapper;
             }
 
-            var pessoaCadastroCommand = new PessoaCadastrarCommand("teste", 1, _mapper);
+            //var pessoaCadastroCommand = new PessoaCadastrarCommand("teste", 1, _mapper);
             //pessoaCadastroCommand.AdicionarContato(1, "(65) 98175-0406");
 
-            var command = pessoaCadastroCommand.Command();
+            //var command = pessoaCadastroCommand.Command();
         }
     }
 }

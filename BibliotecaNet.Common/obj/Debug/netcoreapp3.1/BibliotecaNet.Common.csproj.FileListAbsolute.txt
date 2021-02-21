@@ -1,7 +1,6 @@
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Common\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.deps.json
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Common\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.dll
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Common\bin\Debug\netcoreapp3.1\BibliotecaNet.Common.pdb
-C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Common\obj\Debug\netcoreapp3.1\BibliotecaNet.Common.csprojAssemblyReference.cache
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Common\obj\Debug\netcoreapp3.1\BibliotecaNet.Common.AssemblyInfoInputs.cache
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Common\obj\Debug\netcoreapp3.1\BibliotecaNet.Common.AssemblyInfo.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Common\obj\Debug\netcoreapp3.1\BibliotecaNet.Common.csproj.CoreCompileInputs.cache

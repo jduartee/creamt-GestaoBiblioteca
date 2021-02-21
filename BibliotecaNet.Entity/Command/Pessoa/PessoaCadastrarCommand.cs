@@ -12,7 +12,7 @@ namespace BibliotecaNet.Domain.Command.Pessoa
         public PessoaCadastrarCommand(IMapper mapper)
         { _mapper = mapper; }
 
-        public PessoaCadastrarCommand(string nome, int pessoaTipoId, IMapper mapper)
+        public PessoaCadastrarCommand(string nome, int pessoaTipoId)
         {
             Nome = nome;
             PessoaTipoId = pessoaTipoId;
@@ -20,7 +20,7 @@ namespace BibliotecaNet.Domain.Command.Pessoa
             PessoaEnderecos = new List<PessoaEnderecoVO>();
             PessoaContatos = new List<PessoaContatoVO>();
 
-            _mapper = mapper;
+            //_mapper = mapper;
         }
 
         public string Nome { get; private set; }

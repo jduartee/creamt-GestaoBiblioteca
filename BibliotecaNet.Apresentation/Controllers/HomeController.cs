@@ -1,4 +1,5 @@
 ﻿using BibliotecaNet.Apresentation.Models;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -6,20 +7,23 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
+using BibliotecaNet.Domain.Command.Categoria;
 
 namespace BibliotecaNet.Apresentation.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private IMediator _mediator;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
+
 
         public IActionResult Index()
         {
+         var a =   Mediator.Send(new AcervoCategoriaCadastroCommand(0, "Livro", true));
+            //_mediator.Send(
+
             return View();
         }
 

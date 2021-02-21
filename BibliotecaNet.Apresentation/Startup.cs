@@ -10,6 +10,8 @@ using MediatR;
 using AutoMapper;
 using BibliotecaNet.Domain.Infra;
 using Microsoft.EntityFrameworkCore;
+using BibliotecaNet.Domain.Command.Categoria;
+using BibliotecaNet.Repository.Handler.AcervoCategoria;
 
 namespace BibliotecaNet.Apresentation
 {
@@ -31,7 +33,8 @@ namespace BibliotecaNet.Apresentation
             services.AddDbContext<ApplicationDbContext>();
 
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly,typeof(AcervoCategoriaCadastroHandler).GetTypeInfo().Assembly);
+
 
             IMapper mapper = new AutoMapperConfig().AutoMapperConfiguration().CreateMapper();
             services.AddSingleton(mapper);

@@ -22,7 +22,7 @@ namespace BibliotecaNet.Repository.Handler.AcervoCategoria
 
             _context.AcervoCategorias.Add(acervoCategoria);
 
-            await _context.SaveChangesAsync();
+           var result = await _context.SaveChangesAsync();
 
             return acervoCategoria.AcervoCategoriaId;
         }

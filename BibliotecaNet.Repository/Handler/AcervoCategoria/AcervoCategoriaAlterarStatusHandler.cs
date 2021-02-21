@@ -20,7 +20,7 @@ namespace BibliotecaNet.Repository.Handler.AcervoCategoria
         }
         public async Task<string> Handle(AcervoCategoriaAlterarStatusCommand request, CancellationToken cancellationToken)
         {
-            var acervoCategoria = _context.AcervoCategorias.Where(x => x.CategoriaId == request.Id).FirstOrDefault();
+            var acervoCategoria = _context.AcervoCategorias.Where(x => x.AcervoCategoriaId == request.Id).FirstOrDefault();
             acervoCategoria.Ativo = request.Ativo;
 
             await _context.SaveChangesAsync();

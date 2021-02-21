@@ -24,7 +24,7 @@ namespace BibliotecaNet.Repository.Handler.AcervoCategoria
 
             await _context.SaveChangesAsync();
 
-            return acervoCategoria.CategoriaId;
+            return acervoCategoria.AcervoCategoriaId;
         }
     }
 }

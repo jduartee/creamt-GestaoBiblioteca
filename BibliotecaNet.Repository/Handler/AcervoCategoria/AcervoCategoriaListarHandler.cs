@@ -21,7 +21,7 @@ namespace BibliotecaNet.Repository.Handler.AcervoCategoria
 
         public async Task<IList<AcervoCategoriaVO>> Handle(AcervoCategoriaListarAtivoCommand request, CancellationToken cancellationToken)
         {
-            return await _context.AcervoCategorias.Where(x => x.Ativo == true).Select(x => new AcervoCategoriaVO { Id = x.CategoriaId, Descricao = x.Descricao }).ToListAsync();
+            return await _context.AcervoCategorias.Where(x => x.Ativo == true).Select(x => new AcervoCategoriaVO { Id = x.AcervoCategoriaId, Descricao = x.Descricao }).ToListAsync();
         }
     }
 }

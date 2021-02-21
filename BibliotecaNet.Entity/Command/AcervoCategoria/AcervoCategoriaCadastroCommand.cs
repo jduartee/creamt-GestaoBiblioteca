@@ -18,7 +18,7 @@ namespace BibliotecaNet.Domain.Command.Categoria
         public string Nome { get; private set; }
 
         public AcervoCategoria Command()
-            => new AcervoCategoria { CategoriaId = Id, Descricao = Nome, Ativo = true };
+            => new AcervoCategoria { AcervoCategoriaId = Id, Descricao = Nome, Ativo = true };
 
     }
 }

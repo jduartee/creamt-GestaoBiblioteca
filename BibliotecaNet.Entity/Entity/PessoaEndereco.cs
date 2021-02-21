@@ -7,6 +7,7 @@ namespace BibliotecaNet.Domain.Entity
     public class PessoaEndereco
     {
         public int PessoaEnderecoId { get; set; }
+        public Pessoa Pessoa { get; set; }
         public string Cep { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }

@@ -41,7 +41,7 @@ namespace BibliotecaNet.Domain.Command
                 AcervoEditora = new AcervoEditora { AcervoEditoraId = EditoraId },
                 AcervoCategoria = new AcervoCategoria
                 {
-                    CategoriaId = CategoriaId
+                    AcervoCategoriaId = CategoriaId
                 },
                 AcervoSituacao = new AcervoSituacao { AcervoSituacaoId = Common.AcervoSituacaoEnum.Disponivel }
             };

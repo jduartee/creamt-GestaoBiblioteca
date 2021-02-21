@@ -22,6 +22,6 @@ namespace BibliotecaNet.Domain.Command
         public int Id { get; private set; }
         public bool Ativo { get; private set; }
 
-        public AcervoCategoria Command() => new AcervoCategoria { CategoriaId = Id, Ativo = Ativo };
+        public AcervoCategoria Command() => new AcervoCategoria { AcervoCategoriaId = Id, Ativo = Ativo };
     }
 }

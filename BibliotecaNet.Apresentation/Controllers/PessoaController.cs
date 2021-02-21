@@ -19,7 +19,7 @@ namespace BibliotecaNet.Apresentation.Controllers
 
         public IActionResult Index()
         {
-            var request = new PessoaCadastrarCommand("teste", 1);
+            var request = new PessoaCadastrarCommand("teste", 1, _mapper);
 
             var a = request.Command();
             return View();

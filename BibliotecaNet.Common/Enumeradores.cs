@@ -2,24 +2,24 @@
 {
     public enum PessoaTipoEnum
     {
-        Aluno,
-        Autor,
-        Profissional,
-        Outros
+        Aluno = 1,
+        Autor = 2,
+        Profissional = 3,
+        Outros = 4
     }
 
     public enum AcervoSituacaoEnum
     {
-        Disponivel,
-        Emprestado,
-        Extraviado,
-        EmManutencao
+        Disponivel = 1,
+        Emprestado = 2,
+        Extraviado = 3,
+        EmManutencao = 4
     }
 
     public enum SituacaoEmprestimo
     {
-        Atrasado,
-        Devolvido,
-        Emprestado
+        Atrasado = 1,
+        Devolvido = 2,
+        Emprestado = 3
     }
 }

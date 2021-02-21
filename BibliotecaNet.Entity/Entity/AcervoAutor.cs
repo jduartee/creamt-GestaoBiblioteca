@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BibliotecaNet.Domain.Entity
+﻿namespace BibliotecaNet.Domain.Entity
 {
     public class AcervoAutor
     {

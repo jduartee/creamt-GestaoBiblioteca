@@ -9,6 +9,7 @@ using System.Reflection;
 using MediatR;
 using AutoMapper;
 using BibliotecaNet.Domain.Infra;
+using Microsoft.EntityFrameworkCore;
 
 namespace BibliotecaNet.Apresentation
 {
@@ -26,7 +27,7 @@ namespace BibliotecaNet.Apresentation
         {
             services.AddControllersWithViews();
 
-            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<ApplicationDbContext>();
 
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());

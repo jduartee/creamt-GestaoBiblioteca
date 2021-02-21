@@ -12,6 +12,5 @@ namespace BibliotecaNet.Domain.Entity
         public IList<PessoaEndereco> PessoaEnderecos { get; set; }
         public IList<PessoaContato> PessoaContatos { get; set; }
         public bool Ativo { get; set; }
-
     }
 }

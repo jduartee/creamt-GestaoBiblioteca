@@ -1,25 +1,22 @@
-﻿using BibliotecaNet.Domain.Command.Pessoa;
+﻿using BibliotecaNet.Domain.Command.PessoaContato;
 using BibliotecaNet.Repository.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BibliotecaNet.Repository.Handler.Pessoa
+namespace BibliotecaNet.Repository.Handler.PessoaContato
 {
-    public class PessoaAdicionarContatoHandler : IRequestHandler<PessoaAdicionarContatoCommand, string>
+    public class PessoaContatoAdicionarHandler : IRequestHandler<PessoaContatoAdicionarCommand, string>
     {
 
         public readonly IApplicationDbContext _context;
 
-        public PessoaAdicionarContatoHandler(IApplicationDbContext context)
+        public PessoaContatoAdicionarHandler(IApplicationDbContext context)
         {
             _context = context;
         }
 
-        public async Task<string> Handle(PessoaAdicionarContatoCommand request, CancellationToken cancellationToken)
+        public async Task<string> Handle(PessoaContatoAdicionarCommand request, CancellationToken cancellationToken)
         {
             var pessoaContato = request.Command();
             _context.PessoaContatos.Add(pessoaContato);

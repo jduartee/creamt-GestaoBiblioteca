@@ -4,16 +4,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BibliotecaNet.Domain.Command.Pessoa
+namespace BibliotecaNet.Domain.Command.PessoaDocumento
 {
-    public class PessoaAdicionarDocumentoCommand : IRequest<string>
+    public class PessoaDocumentoAdicionarCommand : IRequest<string>
     {
         private readonly IMapper _mapper;
 
-        private PessoaAdicionarDocumentoCommand()
+        private PessoaDocumentoAdicionarCommand()
         { }
 
-        public PessoaAdicionarDocumentoCommand(int documentoTipoId, string valor, IMapper mapper)
+        public PessoaDocumentoAdicionarCommand(int documentoTipoId, string valor, IMapper mapper)
         {
             PessoaDocumentoTipoId = documentoTipoId;
             Valor = valor;

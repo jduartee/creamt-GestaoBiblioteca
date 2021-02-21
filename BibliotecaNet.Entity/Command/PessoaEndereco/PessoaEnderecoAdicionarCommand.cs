@@ -1,19 +1,16 @@
 ﻿using AutoMapper;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BibliotecaNet.Domain.Command.Pessoa
+namespace BibliotecaNet.Domain.Command.PessoaEndereco
 {
-    public class PessoaAdicionarEnderecoCommand : IRequest<string>
+    public class PessoaEnderecoAdicionarCommand : IRequest<string>
     {
         private readonly IMapper _mapper;
 
-        private PessoaAdicionarEnderecoCommand()
+        private PessoaEnderecoAdicionarCommand()
         { }
 
-        public PessoaAdicionarEnderecoCommand(string cep, string cidade, string estado, string bairro, string logradouro, string numero, string complemento, bool principal)
+        public PessoaEnderecoAdicionarCommand(string cep, string cidade, string estado, string bairro, string logradouro, string numero, string complemento, bool principal)
         {
             Cep = cep;
             Cidade = cidade;

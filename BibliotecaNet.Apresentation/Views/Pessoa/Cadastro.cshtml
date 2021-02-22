@@ -7,7 +7,6 @@
 <form id="form" method="post">
     <h4>Cadastrar usuário</h4>
     <hr />
-    <div asp-validation-summary="All" class="text-danger"></div>
 
     <div class="row">
         <div class="col-md-6">
@@ -18,7 +17,7 @@
 
         <div class="col-md-3">
             <label asp-for="TipoPessoaId">Perfil</label>
-            <select class="form-control" asp-for="TipoPessoaId" onchange="alternarCampos()">
+            <select class="form-control" asp-for="TipoPessoaId">
 
                 @foreach (var item in Enum.GetNames(typeof(BibliotecaNet.Common.PessoaTipoEnum)))
                 {
@@ -42,7 +41,7 @@
 
     <h4>Documento</h4>
     <hr />
-
+    <partial name="_DocumentoUsuario" />
 
     <div class="row">
         <div class="col-md-2">
@@ -54,9 +53,11 @@
 
 <input type="hidden" id="hdnTotalContatos" name="hdnTotalContatos" value="0" />
 <input type="hidden" id="hdnTotalEnderecos" name="hdnTotalEnderecos" value="0" />
+<input type="hidden" id="hdnTotalDocumentos" name="hdnTotalDocumentos" value="0" />
 
 @section Scripts {
     <script src="~/js/jquery.mask.js"></script>
     <script src="~/js/Pessoa/_contato-usuario.js"></script>
+    <script src="~/js/Pessoa/_documento-usuario.js"></script>
     <script src="~/js/Pessoa/_endereco-usuario.js"></script>
 }

@@ -11,6 +11,7 @@ namespace BibliotecaNet.Domain.Infra
                         config.AddProfile<PessoaProfile>();
                         config.AddProfile<PessoaContatoProfile>();
                         config.AddProfile<PessoaContatoTipoProfile>();
+                        config.AddProfile<PessoaDocumentoTipoProfile>();
                     });
 
     }

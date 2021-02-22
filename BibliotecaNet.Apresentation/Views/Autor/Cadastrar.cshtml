@@ -1,0 +1,20 @@
+﻿@model BibliotecaNet.Apresentation.ViewModels.PessoaCadastroVM
+
+<form id="form" method="post">
+    <h4>Cadastrar Autor</h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="Nome"></label>
+            <input asp-for="Nome" class="form-control" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary" style="margin-top:30px">Cadastrar</button>
+        </div>
+    </div>
+
+</form>

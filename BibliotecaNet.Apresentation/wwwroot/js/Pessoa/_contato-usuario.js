@@ -1,5 +1,5 @@
 ﻿$(() => {
-    $('#UserContatoTipo').on('change', function () {
+    $('#TipoContato').on('change', function () {
 
         $('#DescricaoContato').attr('disabled', 'disabled');
         $('#DescricaoContato').val('');
@@ -7,9 +7,9 @@
 
         if ($(this).val() != 'Selecione') {
 
-            if ($('#UserContatoTipo :selected').data('mascara') !== undefined) {
-                $('#DescricaoContato').mask($('#UserContatoTipo :selected').data('mascara'))
-                console.log($('#UserContatoTipo :selected').data('mascara'))
+            if ($('#TipoContato :selected').data('mascara') !== undefined) {
+                $('#DescricaoContato').mask($('#TipoContato :selected').data('mascara'))
+                console.log($('#TipoContato :selected').data('mascara'))
             }
             else {
                 $('#DescricaoContato').unmask();
@@ -19,3 +19,47 @@
         }
     })
 })
+
+let adicionarContato = function () {
+
+
+    let formularioValido = true
+
+
+    $.map($('#myModal input[required], select[required]'), function (item, index) {
+
+        if ($(item).val() == '') {
+            formularioValido = false;
+            $(item).addClass('is-invalid')
+        }
+    });
+
+    if (!formularioValido) {
+        return;
+    }
+
+    let indexRow = $('#hdnTotalContatos').val();
+    let html = [];
+    html.push(`<tr>`);
+    html.push(`    <td>`);
+    html.push(`        <input type="hidden" id="Input.PessoasContato[${indexRow}].TipoContato" name="Input.PessoasContato[${indexRow}].TipoContato" value="${$('#TipoContato').val()}"/>`)
+    html.push(`        <input type="hidden" id="Input.PessoasContato[${indexRow}].DescricaoContato" name="Input.PessoasContato[${indexRow}].DescricaoContato" value="${$('#DescricaoContato').val()}"/>`)
+
+    html.push(`        ${$('#TipoContato :selected').text()}`)
+    html.push(`    </td>`)
+    html.push(`    <td>${$('#DescricaoContato').val()}</td>`)
+    html.push(`    <td></td>`)
+    html.push(`</tr>`);
+
+    $('#tbContatos').append(html.join(''));
+    $('#hdnTotalContatos').val(indexRow++);
+
+    $.map($('#modalContato input, select'), function (item, index) {
+        item.value = ''
+        $(item).removeClass('is-invalid')
+    })
+
+
+    $('#modalContato').modal('hide');
+
+};

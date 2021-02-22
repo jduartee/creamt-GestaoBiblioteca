@@ -1,14 +1,9 @@
 ﻿using BibliotecaNet.Apresentation.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
-using BibliotecaNet.Domain.Command.Categoria;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace BibliotecaNet.Apresentation.Controllers
 {
@@ -21,8 +16,6 @@ namespace BibliotecaNet.Apresentation.Controllers
 
         public async Task<IActionResult> Index()
         {
-         //var a = await  Mediator.Send(new AcervoCategoriaCadastroCommand(0, "Livro", true));
-         
             return View();
         }
 

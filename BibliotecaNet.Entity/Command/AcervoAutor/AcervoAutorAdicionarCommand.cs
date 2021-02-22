@@ -23,7 +23,8 @@ namespace BibliotecaNet.Domain.Command.AcervoAutor
             {
                 Pessoa = new Entity.Pessoa
                 {
-                    Nome = Nome
+                    Nome = Nome,
+                    PessoaTipo = new Entity.PessoaTipo { PessoaTipoId = Common.PessoaTipoEnum.Outros}
                 }
             };
     }

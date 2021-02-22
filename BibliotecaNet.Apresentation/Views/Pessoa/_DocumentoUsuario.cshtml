@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Adicionar Contato</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Adicionar Documento</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -10,8 +10,8 @@
             <div class="modal-body" id="modal-content">
                 <div class="row">
                     <div class="col-md-5">
-                        <label>Tipo Endereço</label>
-                        <select class="form-control" id="UsuarioTipoDocumento" name="UsuarioTipoDocumento">
+                        <label>Tipo Documento</label>
+                        <select class="form-control" id="TipoDocumento" name="TipoDocumento">
                             <option>Selecione</option>
                             @{
 
@@ -25,13 +25,13 @@
                     </div>
                     <div class="col-md-7">
                         <label>Contato</label>
-                        <input type="text" class="form-control" id="DescricaoContato" name="DescricaoContato" disabled />
+                        <input type="text" class="form-control" id="DescricaoDocumento" name="DescricaoDocumento" disabled />
                     </div>
                 </div>
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-success " onclick="adicionarContato()">Adicionar</button>
+                <button type="button" class="btn btn-success " onclick="adicionarDocumento()">Adicionar</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
 

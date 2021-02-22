@@ -120,13 +120,13 @@ namespace BibliotecaNet.Repository.Migrations
                     b.Property<int?>("AcervoId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DataDevolucao")
+                    b.Property<DateTime?>("DataDevolucao")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DataEmprestimo")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DataPrazoDevolucao")
+                    b.Property<DateTime?>("DataPrazoDevolucao")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("PessoaId")
@@ -269,11 +269,11 @@ namespace BibliotecaNet.Repository.Migrations
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Descricao")
-                        .HasColumnType("int");
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Mascara")
-                        .HasColumnType("int");
+                    b.Property<string>("Mascara")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Obrigatorio")
                         .HasColumnType("bit");

@@ -10,13 +10,12 @@ namespace BibliotecaNet.Domain.Command.PessoaDocumentoTipo
     {
         private readonly IMapper _mapper;
 
-        public PessoaDocumentoTipoAdicionarCommand(int descricao, int mascara, bool obrigatorio, bool ativo, IMapper mapper)
+        public PessoaDocumentoTipoAdicionarCommand(string descricao, string mascara, bool obrigatorio, bool ativo, IMapper mapper)
         {
             Descricao = descricao;
             Mascara = mascara;
             Obrigatorio = obrigatorio;
             Ativo = ativo;
-
             _mapper = mapper;
         }
 
@@ -25,8 +24,8 @@ namespace BibliotecaNet.Domain.Command.PessoaDocumentoTipo
 
         }
 
-        public int Descricao { get; set; }
-        public int Mascara { get; set; }
+        public string Descricao { get; set; }
+        public string Mascara { get; set; }
         public bool Obrigatorio { get; set; }
         public bool Ativo { get; set; }
 

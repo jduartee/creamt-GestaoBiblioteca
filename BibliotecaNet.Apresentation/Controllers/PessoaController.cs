@@ -32,7 +32,7 @@ namespace BibliotecaNet.Apresentation.Controllers
         {
 
             ViewData["TipoContato"] = await _mediator.Send(new PessoaContatoTipoListarAtivoQuery());
-            //ViewData["TipoDocumento"] = await _mediator.Send(new PessoaDocumentoTipoListarAtivoQuery());
+            ViewData["TipoDocumento"] = await _mediator.Send(new PessoaDocumentoTipoListarAtivoQuery());
 
 
 

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BibliotecaNet.Repository.Handler.PessoaDocumentoTipo
+namespace BibliotecaNet.Repository.Handler
 {
     public class PessoaDocumentoTipoAdicionarHandler : IRequestHandler<PessoaDocumentoTipoAdicionarCommand, string>
     {

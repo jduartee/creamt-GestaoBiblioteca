@@ -6,11 +6,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BibliotecaNet.Repository.Handler.PessoaEndereco
+namespace BibliotecaNet.Repository.Handler
 {
     public class PessoaEnderecoRemoverHandler : IRequestHandler<PessoaEnderecoRemoverCommand, string>
     {
-
         public readonly IApplicationDbContext _context;
 
         public PessoaEnderecoRemoverHandler(IApplicationDbContext context)

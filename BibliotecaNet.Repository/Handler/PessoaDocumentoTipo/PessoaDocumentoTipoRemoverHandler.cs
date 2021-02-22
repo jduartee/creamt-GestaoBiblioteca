@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BibliotecaNet.Repository.Handler.PessoaDocumentoTipo
+namespace BibliotecaNet.Repository.Handler
 {
     public class PessoaDocumentoTipoRemoverHandler : IRequestHandler<PessoaDocumentoTipoRemoverCommand, string>
     {

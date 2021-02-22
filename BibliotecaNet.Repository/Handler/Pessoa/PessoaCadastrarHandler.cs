@@ -1,13 +1,10 @@
 ﻿using BibliotecaNet.Domain.Command.Pessoa;
 using BibliotecaNet.Repository.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BibliotecaNet.Repository.Handler.Pessoa
+namespace BibliotecaNet.Repository.Handler
 {
     public class PessoaCadastrarHandler : IRequestHandler<PessoaCadastrarCommand, int>
     {

@@ -4,7 +4,7 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BibliotecaNet.Repository.Handler.PessoaEndereco
+namespace BibliotecaNet.Repository.Handler
 {
     public class PessoaEnderecoAdicionarHandler : IRequestHandler<PessoaEnderecoAdicionarCommand, string>
     {

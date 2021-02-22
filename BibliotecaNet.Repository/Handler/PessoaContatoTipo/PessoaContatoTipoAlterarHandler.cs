@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BibliotecaNet.Repository.Handler.PessoaContatoTipo
+namespace BibliotecaNet.Repository.Handler
 {
     public class PessoaContatoTipoAlterarHandler : IRequestHandler<PessoaContatoTipoAlterarCommand, string>
     {

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BibliotecaNet.Repository.Handler.AcervoCategoria
+namespace BibliotecaNet.Repository.Handler
 {
     public class AcervoCategoriaListarHandler : IRequestHandler<AcervoCategoriaListarAtivoCommand, IList<AcervoCategoriaVO>>
     {

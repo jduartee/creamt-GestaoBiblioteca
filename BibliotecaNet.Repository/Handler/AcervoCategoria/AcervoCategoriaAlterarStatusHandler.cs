@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BibliotecaNet.Repository.Handler.AcervoCategoria
+namespace BibliotecaNet.Repository.Handler 
 {
     public class AcervoCategoriaAlterarStatusHandler : IRequestHandler<AcervoCategoriaAlterarStatusCommand, string>
     {

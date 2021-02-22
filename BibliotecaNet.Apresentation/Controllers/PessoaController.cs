@@ -42,6 +42,10 @@ namespace BibliotecaNet.Apresentation.Controllers
         [HttpPost]
         public async Task<IActionResult> Cadastro(PessoaCadastroVM model)
         {
+            var pessoaCadastro = new PessoaCadastrarCommand(model.Nome, model.TipoPessoaId, _mapper);
+
+            await _mediator.Send(pessoaCadastro);
+
             return Json("ok");
         }
 

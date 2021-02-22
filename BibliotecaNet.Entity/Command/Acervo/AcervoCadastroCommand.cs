@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BibliotecaNet.Domain.Command
 {
-    public class AcervoCadastroCommand : IRequest<int>
+    public class AcervoCadastroCommand : IRequest<string>
     {
         private AcervoCadastroCommand()
         { }

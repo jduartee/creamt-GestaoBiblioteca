@@ -1,17 +1,16 @@
+using AutoMapper;
+using BibliotecaNet.Domain.Infra;
 using BibliotecaNet.Repository.DbContext;
+using BibliotecaNet.Repository.Handler;
 using BibliotecaNet.Repository.Interfaces;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
-using MediatR;
-using AutoMapper;
-using BibliotecaNet.Domain.Infra;
-using Microsoft.EntityFrameworkCore;
-using BibliotecaNet.Domain.Command.Categoria;
-using BibliotecaNet.Repository.Handler.AcervoCategoria;
 
 namespace BibliotecaNet.Apresentation
 {
@@ -30,8 +29,7 @@ namespace BibliotecaNet.Apresentation
             services.AddControllersWithViews();
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDbContext<ApplicationDbContext>();
-
+            
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
             services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly,typeof(AcervoCategoriaCadastroHandler).GetTypeInfo().Assembly);
 

@@ -1,0 +1,58 @@
+﻿@model BibliotecaNet.Apresentation.ViewModels.PessoaCadastroVM
+@{
+}
+
+
+
+<form id="form" method="post">
+    <h4>Cadastrar usuário</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="Nome"></label>
+            <input asp-for="Nome" class="form-control" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-3">
+            <label asp-for="TipoPessoaId">Perfil</label>
+            <select class="form-control" asp-for="TipoPessoaId" onchange="alternarCampos()">
+
+                @foreach (var item in Enum.GetNames(typeof(BibliotecaNet.Common.PessoaTipoEnum)))
+                {
+                    <option value="@item">@((Enum.Parse<BibliotecaNet.Common.PessoaTipoEnum>(item)).ToString())</option>
+                }
+            </select>
+            <span asp-validation-for="TipoPessoaId" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <h4>Endereços</h4>
+    <hr />
+
+    <partial name="_EnderecoUsuario" />
+
+
+    <h4>Contatos</h4>
+    <hr />
+    <partial name="_ContatoUsuario" />
+
+
+    <div class="row">
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary" style="margin-top:30px">Cadastrar</button>
+        </div>
+    </div>
+
+</form>
+
+<input type="hidden" id="hdnTotalContatos" name="hdnTotalContatos" value="0" />
+<input type="hidden" id="hdnTotalEnderecos" name="hdnTotalEnderecos" value="0" />
+
+@section Scripts {
+    <script src="~/js/Pessoa/_contato-usuario.js"></script>
+    <script src="~/js/Pessoa/_endereco-usuario.js"></script>
+}

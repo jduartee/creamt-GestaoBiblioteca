@@ -20,8 +20,8 @@ namespace BibliotecaNet.Repository.Migrations
             #region PessoaTipo
 
             migrationBuilder.InsertData(nameof(PessoaTipo), new string[] { nameof(PessoaTipo.PessoaTipoId), nameof(PessoaTipo.Descricao) }, new object[] { (int)PessoaTipoEnum.Aluno, nameof(PessoaTipoEnum.Aluno) });
-            migrationBuilder.InsertData(nameof(PessoaTipo), new string[] { nameof(PessoaTipo.PessoaTipoId), nameof(PessoaTipo.Descricao) }, new object[] { (int)PessoaTipoEnum.Autor, nameof(PessoaTipoEnum.Autor) });
-            migrationBuilder.InsertData(nameof(PessoaTipo), new string[] { nameof(PessoaTipo.PessoaTipoId), nameof(PessoaTipo.Descricao) }, new object[] { (int)PessoaTipoEnum.Profissional, nameof(PessoaTipoEnum.Profissional) });
+            //migrationBuilder.InsertData(nameof(PessoaTipo), new string[] { nameof(PessoaTipo.PessoaTipoId), nameof(PessoaTipo.Descricao) }, new object[] { (int)PessoaTipoEnum.Autor, nameof(PessoaTipoEnum.Autor) });
+            //migrationBuilder.InsertData(nameof(PessoaTipo), new string[] { nameof(PessoaTipo.PessoaTipoId), nameof(PessoaTipo.Descricao) }, new object[] { (int)PessoaTipoEnum.Profissional, nameof(PessoaTipoEnum.Profissional) });
             migrationBuilder.InsertData(nameof(PessoaTipo), new string[] { nameof(PessoaTipo.PessoaTipoId), nameof(PessoaTipo.Descricao) }, new object[] { (int)PessoaTipoEnum.Outros, nameof(PessoaTipoEnum.Outros) });
 
             #endregion

@@ -17,4 +17,8 @@
     <ProjectReference Include="..\BibliotecaNet.Common\BibliotecaNet.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ValueObject\PessoaContato\" />
+  </ItemGroup>
+
 </Project>

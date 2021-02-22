@@ -1185,8 +1185,7 @@
       "BibliotecaNet.Common/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "Microsoft.AspNet.Identity.EntityFramework": "2.2.3",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.3"
+          "Microsoft.AspNet.Identity.EntityFramework": "2.2.3"
         },
         "runtime": {
           "BibliotecaNet.Common.dll": {}

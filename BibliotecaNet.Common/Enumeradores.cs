@@ -3,8 +3,8 @@
     public enum PessoaTipoEnum
     {
         Aluno = 1,
-        Autor = 2,
-        Profissional = 3,
+        //Profissional = 3,
+        //Autor = 2,
         Outros = 4
     }
 

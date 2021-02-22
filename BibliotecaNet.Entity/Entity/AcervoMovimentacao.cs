@@ -9,7 +9,7 @@ namespace BibliotecaNet.Domain.Entity
         public Pessoa Pessoa { get; set; }
         public Usuario Usuario { get; set; }
         public DateTime DataEmprestimo { get; set; }
-        public DateTime DataPrazoDevolucao { get; set; }
-        public DateTime DataDevolucao { get; set; }
+        public DateTime? DataPrazoDevolucao { get; set; }
+        public DateTime? DataDevolucao { get; set; }
     }
 }

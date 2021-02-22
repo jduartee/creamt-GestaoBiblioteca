@@ -37,7 +37,7 @@ namespace BibliotecaNet.Domain.Command
                 Titulo = Titulo,
                 Edicao = Edicao,
                 Ano = Ano,
-                AcervoAutor = new AcervoAutor { AcervoAutorId = AutorId },
+                AcervoAutor = new Entity.AcervoAutor { AcervoAutorId = AutorId },
                 AcervoEditora = new AcervoEditora { AcervoEditoraId = EditoraId },
                 AcervoCategoria = new AcervoCategoria
                 {

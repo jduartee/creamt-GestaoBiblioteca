@@ -1,4 +1,4 @@
-﻿<div class="modal fade" id="modalContato" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+﻿<div class="modal fade" id="modalDocumento" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -11,13 +11,13 @@
                 <div class="row">
                     <div class="col-md-5">
                         <label>Tipo Endereço</label>
-                        <select class="form-control" id="UserContatoTipo" name="UserTipoContato">
+                        <select class="form-control" id="UsuarioTipoDocumento" name="UsuarioTipoDocumento">
                             <option>Selecione</option>
                             @{
 
-                                foreach (var tipoContato in (ViewData["TipoContato"] as IEnumerable<BibliotecaNet.Domain.ValueObject.PessoaContatoTipo.PessoaContatoTipoVO>))
+                                foreach (var tipoDocumento in (ViewData["TipoDocumento"] as IEnumerable<BibliotecaNet.Domain.ValueObject.PessoaDocumentoTipo.PessoaDocumentoTipoVO>))
                                 {
-                                    <option value="@tipoContato.Id" data-mascara="@tipoContato.Mascara">@tipoContato.Descricao</option>
+                                    <option value="@tipoDocumento.Id" data-mascara="@tipoDocumento.Mascara">@tipoDocumento.Descricao</option>
                                 }
 
                             }
@@ -41,7 +41,7 @@
 
 <div class="row">
     <div class="offset-10 col-md-2 ">
-        <button type="button" class="btn btn-success " onclick="$('#modalContato').modal('show');">Adicionar Contato</button>
+        <button type="button" class="btn btn-success " onclick="$('#modalDocumento').modal('show');">Adicionar Contato</button>
     </div>
 </div>
 <div class="row">
@@ -49,12 +49,12 @@
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th>Tipo Contato</th>
-                    <th>Contato</th>
+                    <th>Tipo Documento</th>
+                    <th>Documento</th>
                     <th></th>
                 </tr>
             </thead>
-            <tbody id="tbContatos"></tbody>
+            <tbody id="tbDocumentos"></tbody>
         </table>
     </div>
 </div>

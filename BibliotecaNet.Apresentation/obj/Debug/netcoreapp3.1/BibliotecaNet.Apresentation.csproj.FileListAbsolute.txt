@@ -105,3 +105,4 @@ C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\bin\Debu
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Pessoa\Cadastro.cshtml.g.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Pessoa\_ContatoUsuario.cshtml.g.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Pessoa\_EnderecoUsuario.cshtml.g.cs
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Pessoa\_DocumentoUsuario.cshtml.g.cs

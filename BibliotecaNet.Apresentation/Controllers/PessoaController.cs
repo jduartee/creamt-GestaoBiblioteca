@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using BibliotecaNet.Apresentation.ViewModels;
 using BibliotecaNet.Domain.Command.Pessoa;
 using BibliotecaNet.Domain.Query.PessoaContatoTipo;
+using BibliotecaNet.Domain.Query.PessoaDocumentoTipo;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -26,13 +28,21 @@ namespace BibliotecaNet.Apresentation.Controllers
             return View();
         }
 
-        public IActionResult Cadastro()
+        public async Task<IActionResult> Cadastro()
         {
-            var tipoContato = _mediator.Send(new PessoaContatoTipoListarAtivoQuery());
+
+            ViewData["TipoContato"] = await _mediator.Send(new PessoaContatoTipoListarAtivoQuery());
+            //ViewData["TipoDocumento"] = await _mediator.Send(new PessoaDocumentoTipoListarAtivoQuery());
 
 
 
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Cadastro(PessoaCadastroVM model)
+        {
+            return Json("ok");
         }
 
     }

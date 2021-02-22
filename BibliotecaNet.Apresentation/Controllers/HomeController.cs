@@ -19,11 +19,10 @@ namespace BibliotecaNet.Apresentation.Controllers
         protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-         var a =   Mediator.Send(new AcervoCategoriaCadastroCommand(0, "Livro", true));
-            //_mediator.Send(
-
+         //var a = await  Mediator.Send(new AcervoCategoriaCadastroCommand(0, "Livro", true));
+         
             return View();
         }
 

@@ -1,4 +1,5 @@
 ﻿using BibliotecaNet.Apresentation.Models;
+using BibliotecaNet.Domain.Query.AcervoAutor;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +17,8 @@ namespace BibliotecaNet.Apresentation.Controllers
 
         public async Task<IActionResult> Index()
         {
+        var D=   await Mediator.Send(new AcervoAutorListarPaginadoQuery("ju", 1, 10));
+
             return View();
         }
 

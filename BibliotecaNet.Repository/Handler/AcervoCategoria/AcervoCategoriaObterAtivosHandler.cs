@@ -3,8 +3,8 @@ using BibliotecaNet.Domain.Query.AcervoCategoria;
 using BibliotecaNet.Domain.ValueObject.AcervoCategoria;
 using BibliotecaNet.Repository.Interfaces;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,7 +22,9 @@ namespace BibliotecaNet.Repository.Handler
 
         public async Task<IList<AcervoCategoriaVO>> Handle(AcervoCategoriaObterAtivosQuery request, CancellationToken cancellationToken)
         {
-            return await _context.AcervoCategorias.Where(x => x.Ativo == true).Select(x => new AcervoCategoriaVO { Id = x.AcervoCategoriaId, Descricao = x.Descricao }).ToListAsync();
+            return await _context.AcervoCategorias
+                .Where(x => x.Ativo == true).Select(x => new AcervoCategoriaVO { Id = x.AcervoCategoriaId, Descricao = x.Descricao })
+                .ToListAsync();
         }
     }
 }

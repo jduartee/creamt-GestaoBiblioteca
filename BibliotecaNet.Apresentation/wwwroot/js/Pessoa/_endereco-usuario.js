@@ -22,18 +22,18 @@ let adicionarEndereco = function () {
     let html = [];
     html.push(`<tr>`);
     html.push(`    <td>`);
-    html.push(`        <input type="hidden" id="Input.UserAddress[${indexRow}].Cep" name="Input.UserAddress[${indexRow}].Cep" value="${$('#Cep').val()}"/>`)
-    html.push(`        <input type="hidden" id="Input.UserAddress[${indexRow}].Cidade" name="Input.UserAddress[${indexRow}].Cidade" value="${$('#Cidade').val()}"/>`)
-    html.push(`        <input type="hidden" id="Input.UserAddress[${indexRow}].Bairro" name="Input.UserAddress[${indexRow}].Bairro" value="${$('#Bairro').val()}"/>`)
-    html.push(`        <input type="hidden" id="Input.UserAddress[${indexRow}].Logradouro" name="Input.UserAddress[${indexRow}].Logradouro" value="${$('#Logradouro').val()}"/>`)
-    html.push(`        <input type="hidden" id="Input.UserAddress[${indexRow}].Numero" name="Input.UserAddress[${indexRow}].Numero" value="${$('#Numero').val()}"/>`)
-    html.push(`        <input type="hidden" id="Input.UserAddress[${indexRow}].Complemento" name="Input.UserAddress[${indexRow}].Complemento" value="${$('#Complemento').val()}"/>`)
-    html.push(`        <input type="hidden" id="Input.UserAddress[${indexRow}].EnderecoPrincipal" name="Input.UserAddress[${indexRow}].EnderecoPrincipal" value="${$('#EnderecoPrincipal').prop('checked')}"/>`)
-
-    html.push(`        ${$('#UserEnderecoTipo :selected').text()}`)
+    html.push(`        <input type="hidden" id="PessoaEndereco[${indexRow}].Cep" name="PessoaEndereco[${indexRow}].Cep" value="${$('#Cep').val()}"/>`)
+    html.push(`        <input type="hidden" id="PessoaEndereco[${indexRow}].Cidade" name="PessoaEndereco[${indexRow}].Cidade" value="${$('#Cidade').val()}"/>`)
+    html.push(`        <input type="hidden" id="PessoaEndereco[${indexRow}].Estado" name="PessoaEndereco[${indexRow}].Estado" value="${$('#Estado').val()}"/>`)
+    html.push(`        <input type="hidden" id="PessoaEndereco[${indexRow}].Bairro" name="PessoaEndereco[${indexRow}].Bairro" value="${$('#Bairro').val()}"/>`)
+    html.push(`        <input type="hidden" id="PessoaEndereco[${indexRow}].Logradouro" name="PessoaEndereco[${indexRow}].Logradouro" value="${$('#Logradouro').val()}"/>`)
+    html.push(`        <input type="hidden" id="PessoaEndereco[${indexRow}].Numero" name="PessoaEndereco[${indexRow}].Numero" value="${$('#Numero').val()}"/>`)
+    html.push(`        <input type="hidden" id="PessoaEndereco[${indexRow}].Complemento" name="PessoaEndereco[${indexRow}].Complemento" value="${$('#Complemento').val()}"/>`)
+    html.push(`        <input type="hidden" id="PessoaEndereco[${indexRow}].EnderecoPrincipal" name="PessoaEndereco[${indexRow}].EnderecoPrincipal" value="${$('#EnderecoPrincipal').prop('checked')}"/>`)
+    html.push(`        ${$('#Cep').text()}`)
     html.push(`    </td>`)
-    html.push(`    <td>${$('#Cep').val()}</td>`)
     html.push(`    <td>${$('#Cidade').val()}</td>`)
+    html.push(`    <td>${$('#Estado').val()}</td>`)
     html.push(`    <td>${$('#Bairro').val()}</td>`)
     html.push(`    <td>${$('#Logradouro').val()}</td>`)
     html.push(`    <td>${$('#Numero').val()}</td>`)

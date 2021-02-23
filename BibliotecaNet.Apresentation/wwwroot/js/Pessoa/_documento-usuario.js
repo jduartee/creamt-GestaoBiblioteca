@@ -11,15 +11,15 @@
                 $('#DescricaoDocumento').mask($('#TipoDocumento :selected').data('mascara'))
             }
             else {
-                $('#DescricaoContato').unmask();
+                $('#DescricaoDocumento').unmask();
             }
 
-            $('#DescricaoContato').removeAttr('disabled')
+            $('#DescricaoDocumento').removeAttr('disabled')
         }
     })
 })
 
-let adicionarContato = function () {
+let adicionarDocumento = function () {
 
 
     let formularioValido = true
@@ -41,12 +41,11 @@ let adicionarContato = function () {
     let html = [];
     html.push(`<tr>`);
     html.push(`    <td>`);
-    html.push(`        <input type="hidden" id="Input.PessoaDocumento[${indexRow}].TipoDpcumento" name="Input.PessoaDocumento[${indexRow}].TipoDpcumento" value="${$('#TipoContato').val()}"/>`)
-    html.push(`        <input type="hidden" id="Input.PessoaDocumento[${indexRow}].DescricaoDocumento" name="Input.PessoaDocumento[${indexRow}].DescricaoDocumento" value="${$('#DescricaoContato').val()}"/>`)
-
-    html.push(`        ${$('#TipoContato :selected').text()}`)
+    html.push(`        <input type="hidden" id="PessoaDocumento[${indexRow}].TipoDocumento" name="PessoaDocumento[${indexRow}].TipoDocumento" value="${$('#TipoDocumento').val()}"/>`)
+    html.push(`        <input type="hidden" id="PessoaDocumento[${indexRow}].DescricaoDocumento" name="PessoaDocumento[${indexRow}].DescricaoDocumento" value="${$('#DescricaoDocumento').val()}"/>`)
+    html.push(`        ${$('#TipoDocumento :selected').text()}`)
     html.push(`    </td>`)
-    html.push(`    <td>${$('#DescricaoContato').val()}</td>`)
+    html.push(`    <td>${$('#DescricaoDocumento').val()}</td>`)
     html.push(`    <td></td>`)
     html.push(`</tr>`);
 

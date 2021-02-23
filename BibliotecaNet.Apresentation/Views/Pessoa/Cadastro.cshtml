@@ -21,7 +21,7 @@
 
                 @foreach (var item in Enum.GetNames(typeof(BibliotecaNet.Common.PessoaTipoEnum)))
                 {
-                    <option value="@item">@((Enum.Parse<BibliotecaNet.Common.PessoaTipoEnum>(item)).ToString())</option>
+                    <option value="@((int)Enum.Parse<BibliotecaNet.Common.PessoaTipoEnum>(item))">@item</option>
                 }
             </select>
             <span asp-validation-for="TipoPessoaId" class="text-danger"></span>

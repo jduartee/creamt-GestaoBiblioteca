@@ -2,6 +2,7 @@
 using BibliotecaNet.Domain.ValueObject.Pessoa;
 using MediatR;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BibliotecaNet.Domain.Command.Pessoa
 {
@@ -45,7 +46,27 @@ namespace BibliotecaNet.Domain.Command.Pessoa
         }
 
         public Entity.Pessoa Command()
-            => _mapper.Map<Entity.Pessoa>(this);
+        {
+            var pessoa = new Entity.Pessoa
+            {
+                Nome = Nome,
+                //PessoaTipo = new Entity.PessoaTipo { PessoaTipoId = (Common.PessoaTipoEnum)PessoaTipoId },
+                Ativo = true
+            };
+
+            if (PessoaDocumentos.Count > 0)
+                pessoa.PessoaDocumentos = PessoaDocumentos.Select(x => new Entity.PessoaDocumento { PessoaDocumentoId = x.PessoaDocumentoTipoId, Valor = x.Valor }).ToList();
+
+            if (PessoaContatos.Count > 0)
+                pessoa.PessoaContatos = PessoaContatos.Select(x => new Entity.PessoaContato { PessoaContatoId = x.PessoaContatoTipoId, Valor = x.Valor }).ToList();
+
+            if (PessoaEnderecos.Count > 0)
+                pessoa.PessoaEnderecos = PessoaEnderecos.Select(x => new Entity.PessoaEndereco
+                { Cep = x.Cep, Cidade = x.Cidade, Estado = x.Estado, Bairro = x.Bairro, Logradouro = x.Logradouro, Numero = x.Numero, Complemento = x.Complemento, Principal = x.Principal }).ToList();
+
+            return pessoa;
+        }
+
 
     }
 }

@@ -42,9 +42,8 @@ let adicionarContato = function () {
     let html = [];
     html.push(`<tr>`);
     html.push(`    <td>`);
-    html.push(`        <input type="hidden" id="Input.PessoasContato[${indexRow}].TipoContato" name="Input.PessoasContato[${indexRow}].TipoContato" value="${$('#TipoContato').val()}"/>`)
-    html.push(`        <input type="hidden" id="Input.PessoasContato[${indexRow}].DescricaoContato" name="Input.PessoasContato[${indexRow}].DescricaoContato" value="${$('#DescricaoContato').val()}"/>`)
-
+    html.push(`        <input type="hidden" id="PessoaContato[${indexRow}].TipoContato" name="PessoaContato[${indexRow}].TipoContato" value="${$('#TipoContato').val()}"/>`)
+    html.push(`        <input type="hidden" id="PessoaContato[${indexRow}].DescricaoContato" name="PessoaContato[${indexRow}].DescricaoContato" value="${$('#DescricaoContato').val()}"/>`)
     html.push(`        ${$('#TipoContato :selected').text()}`)
     html.push(`    </td>`)
     html.push(`    <td>${$('#DescricaoContato').val()}</td>`)

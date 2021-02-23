@@ -6,7 +6,7 @@
 <form id="form" method="post">
     <h4>Cadastrar usuário</h4>
     <hr />
-
+    <input type="hidden" asp-for="Id" />
     <div class="row">
         <div class="col-md-8">
             <label asp-for="Titulo"></label>
@@ -23,23 +23,31 @@
             <input asp-for="Ano" class="form-control" />
             <span asp-validation-for="Ano" class="text-danger"></span>
         </div>
-        <div class="col-md-6">
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
             <label>Categoria</label>
             <select class="form-control" asp-for="CategoriaId">
             </select>
             <span asp-validation-for="CategoriaId" class="text-danger"></span>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Editora</label>
             <select class="form-control" asp-for="EditoraId">
             </select>
             <span asp-validation-for="EditoraId" class="text-danger"></span>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Autor</label>
             <select class="form-control" asp-for="AutorId">
             </select>
             <span asp-validation-for="AutorId" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary" style="margin-top:30px">Cadastrar</button>
         </div>
     </div>
 </form>
@@ -52,29 +60,26 @@
 
             $('#CategoriaId').select2({
                 ajax: {
-                    url: 'https://api.github.com/search/repositories',
+                    url: 'BuscarCategoriaSelect',
                     dataType: 'json'
-                    // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
-                }
+                },
+                delay: 250
             });
 
             $('#EditoraId').select2({
                 ajax: {
-                    url: 'https://api.github.com/search/repositories',
+                    url: 'BuscarEditoraSelect',
                     dataType: 'json'
-                    // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
-                }
+                },
+                delay: 250
             });
 
             $('#AutorId').select2({
                 ajax: {
                     url: 'BuscarAutorSelect',
                     dataType: 'json'
-                    
-                    // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
                 },
-                delay: 250,
-                minimumInputLength: 3
+                delay: 250
             });
 
         })

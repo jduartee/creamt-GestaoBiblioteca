@@ -1,7 +1,10 @@
-﻿using BibliotecaNet.Domain.Query.AcervoAutor;
+﻿using BibliotecaNet.Apresentation.ViewModels.Acervo;
+using BibliotecaNet.Domain.Command;
+using BibliotecaNet.Domain.Query.AcervoAutor;
+using BibliotecaNet.Domain.Query.AcervoCategoria;
+using BibliotecaNet.Domain.Query.AcervoEditora;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace BibliotecaNet.Apresentation.Controllers
@@ -25,10 +28,18 @@ namespace BibliotecaNet.Apresentation.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Cadastro(AcervoVM model)
+        {
+            var result = await _mediador.Send(new AcervoCadastroCommand(model.Id, model.Titulo, model.Edicao, model.Ano, model.AutorId, model.EditoraId, model.CategoriaId));
+
+            return View();
+        }
+
         [HttpGet]
         public async Task<IActionResult> BuscarAutorSelect(string term)
         {
-            var result = await _mediador.Send(new AcervoAutorListarPorSelectQuery(term));
+            var result = await _mediador.Send(new AcervoAutorListarPorSelectQuery(term ?? ""));
 
             return Json(result);
         }
@@ -36,7 +47,7 @@ namespace BibliotecaNet.Apresentation.Controllers
         [HttpGet]
         public async Task<IActionResult> BuscarEditoraSelect(string term)
         {
-            var result = await _mediador.Send(new AcervoAutorListarPorSelectQuery(term));
+            var result = await _mediador.Send(new AcervoEditoraListarPorNomeSelectQuery(term ?? ""));
 
             return Json(result);
         }
@@ -44,7 +55,7 @@ namespace BibliotecaNet.Apresentation.Controllers
         [HttpGet]
         public async Task<IActionResult> BuscarCategoriaSelect(string term)
         {
-            var result = await _mediador.Send(new AcervoAutorListarPorSelectQuery(term));
+            var result = await _mediador.Send(new AcervoCategoriaObterAtivosQuery(term ?? ""));
 
             return Json(result);
         }

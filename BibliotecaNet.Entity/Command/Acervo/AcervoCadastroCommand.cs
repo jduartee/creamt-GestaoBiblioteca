@@ -11,7 +11,7 @@ namespace BibliotecaNet.Domain.Command
         private AcervoCadastroCommand()
         { }
 
-        public AcervoCadastroCommand(int id, string titulo, string edicao, int autorId, int editoraId, int ano, int categoriaId)
+        public AcervoCadastroCommand(int id, string titulo, string edicao, int ano, int autorId, int editoraId, int categoriaId)
         {
             Id = id;
             Titulo = titulo;
@@ -33,7 +33,7 @@ namespace BibliotecaNet.Domain.Command
         public Acervo Command()
             => new Acervo
             {
-                AcervoId = Id,
+                //AcervoId = Id,
                 Titulo = Titulo,
                 Edicao = Edicao,
                 Ano = Ano,
@@ -42,8 +42,8 @@ namespace BibliotecaNet.Domain.Command
                 AcervoCategoria = new AcervoCategoria
                 {
                     AcervoCategoriaId = CategoriaId
-                },
-                AcervoSituacao = new AcervoSituacao { AcervoSituacaoId = Common.AcervoSituacaoEnum.Disponivel }
+                }
+                //AcervoSituacao = new AcervoSituacao { AcervoSituacaoId = Common.AcervoSituacaoEnum.Disponivel }
             };
     }
 }

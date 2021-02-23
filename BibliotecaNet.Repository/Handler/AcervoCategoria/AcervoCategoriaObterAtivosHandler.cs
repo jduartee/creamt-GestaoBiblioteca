@@ -1,16 +1,15 @@
 ﻿using BibliotecaNet.Domain.Query.AcervoCategoria;
-using BibliotecaNet.Domain.ValueObject.AcervoCategoria;
+using BibliotecaNet.Domain.ValueObject;
 using BibliotecaNet.Repository.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace BibliotecaNet.Repository.Handler
 {
-    public class AcervoCategoriaObterAtivosHandler : IRequestHandler<AcervoCategoriaObterAtivosQuery, IList<AcervoCategoriaVO>>
+    public class AcervoCategoriaObterAtivosHandler : IRequestHandler<AcervoCategoriaObterAtivosQuery, RequestSelectVO>
     {
         public readonly IApplicationDbContext _context;
 
@@ -19,11 +18,14 @@ namespace BibliotecaNet.Repository.Handler
             _context = context;
         }
 
-        public async Task<IList<AcervoCategoriaVO>> Handle(AcervoCategoriaObterAtivosQuery request, CancellationToken cancellationToken)
+        public async Task<RequestSelectVO> Handle(AcervoCategoriaObterAtivosQuery request, CancellationToken cancellationToken)
         {
-            return await _context.AcervoCategorias
-                .Where(x => x.Ativo == true).Select(x => new AcervoCategoriaVO { Id = x.AcervoCategoriaId, Descricao = x.Descricao })
+            var result = await _context.AcervoCategorias
+                .Where(x => x.Ativo == true && x.Descricao.Contains(request.Descricao))
+                .Select(x => new SelectResult { id = x.AcervoCategoriaId.ToString(), text = x.Descricao })
                 .ToListAsync();
+
+            return new RequestSelectVO { results = result };
         }
     }
 }

@@ -1,12 +1,15 @@
-﻿using BibliotecaNet.Domain.ValueObject.AcervoCategoria;
+﻿using BibliotecaNet.Domain.ValueObject;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BibliotecaNet.Domain.Query.AcervoCategoria
 {
-    public class AcervoCategoriaObterAtivosQuery : IRequest<IList<AcervoCategoriaVO>>
+    public class AcervoCategoriaObterAtivosQuery : IRequest<RequestSelectVO>
     {
+        public AcervoCategoriaObterAtivosQuery(string descricao)
+        {
+            Descricao = descricao;
+        }
+
+        public string Descricao { get; set; }
     }
 }

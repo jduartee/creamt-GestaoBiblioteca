@@ -1,10 +1,8 @@
 ﻿@model BibliotecaNet.Apresentation.ViewModels.Acervo.AcervoVM
-@{
-}
 
 
 <form id="form" method="post">
-    <h4>Cadastrar usuário</h4>
+    <h4>Cadastrar de acervo</h4>
     <hr />
     <input type="hidden" asp-for="Id" />
     <div class="row">
@@ -52,9 +50,9 @@
     </div>
 </form>
 
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 @section Scripts {
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(function () {
 

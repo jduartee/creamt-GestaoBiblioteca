@@ -25,7 +25,7 @@ namespace BibliotecaNet.Apresentation.Controllers
             return View();
         }
 
-        public IActionResult Cadastro()
+        public IActionResult Cadastro(int? id)
         {
             return View();
         }

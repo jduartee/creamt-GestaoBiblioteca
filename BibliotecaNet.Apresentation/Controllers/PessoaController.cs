@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BibliotecaNet.Apresentation.ViewModels;
 using BibliotecaNet.Domain.Command.Pessoa;
+using BibliotecaNet.Domain.Query.Pessoa;
 using BibliotecaNet.Domain.Query.PessoaContatoTipo;
 using BibliotecaNet.Domain.Query.PessoaDocumentoTipo;
 using MediatR;
@@ -46,6 +47,22 @@ namespace BibliotecaNet.Apresentation.Controllers
             await _mediator.Send(pessoaCadastro);
 
             return View();
+        }
+
+        public async Task<IActionResult> ListarPessoas(string search, string sort, string order, int offset, int limit = 10)
+        {
+            var result = await _mediator.Send(new PessoaListarPaginadoQuery(search ?? "", offset, limit));
+
+            return Ok(new
+            {
+                result.Total,
+                result.TotalNotFiltered,
+                rows = result.Select(x => new
+                {
+                    x.Id,
+                    x.Nome
+                })
+            });
         }
 
     }

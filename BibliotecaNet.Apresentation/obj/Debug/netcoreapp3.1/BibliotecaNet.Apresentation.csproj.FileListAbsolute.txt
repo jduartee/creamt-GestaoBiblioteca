@@ -106,3 +106,6 @@ C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debu
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\PessoaDocumento\Cadastro.cshtml.g.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Acervo\Cadastro.cshtml.g.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Acervo\Index.cshtml.g.cs
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Pessoa\Index.cshtml.g.cs
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\AcervoMovimentacao\Index.cshtml.g.cs
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\AcervoMovimentacao\Cadastro.cshtml.g.cs

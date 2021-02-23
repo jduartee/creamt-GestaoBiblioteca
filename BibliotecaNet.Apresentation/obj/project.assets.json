@@ -2347,10 +2347,7 @@
         },
         "runtime": {
           "bin/placeholder/BibliotecaNet.Validation.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },

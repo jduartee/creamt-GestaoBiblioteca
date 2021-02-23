@@ -1,9 +1,8 @@
 ﻿using BibliotecaNet.Domain.Command.AcervoMovimentacao;
 using BibliotecaNet.Repository.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -20,7 +19,13 @@ namespace BibliotecaNet.Repository.Handler
 
         public async Task<string> Handle(AcervoMovimentacaoCadastrarCommand request, CancellationToken cancellationToken)
         {
-            _dbContext.AcervoMovimentacaos.Add(request.Command());
+            var acervoMovimentacao = request.Command();
+            acervoMovimentacao.Acervo = await _dbContext.Acervos.Where(x => x.AcervoId == request.AcervoID).FirstOrDefaultAsync();
+            acervoMovimentacao.Pessoa = await _dbContext.Pessoas.Where(x => x.PessoaId == request.PessoaId).FirstOrDefaultAsync();
+            acervoMovimentacao.Usuario = await _dbContext.Usuarios.Where(x => x.Id == request.UsuarioId).FirstOrDefaultAsync();
+
+            _dbContext.AcervoMovimentacaos.Add(acervoMovimentacao);
+
             await _dbContext.SaveChangesAsync();
 
             return "Emprestimo efetuado com sucesso.";

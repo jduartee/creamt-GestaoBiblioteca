@@ -8,16 +8,15 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using BibliotecaNet.Common;
 
 namespace BibliotecaNet.Repository.Handler
 {
-    public class AcervoMovimentacaoListarPaginada : IRequestHandler<AcervoMovimentacaoListarPaginadaQuery, PaginatedList<AcervoMovimentacaoVO>>
+    public class AcervoMovimentacaoListarPaginadaHandler : IRequestHandler<AcervoMovimentacaoListarPaginadaQuery, PaginatedList<AcervoMovimentacaoVO>>
     {
         private readonly IApplicationDbContext _context;
 
-        public AcervoMovimentacaoListarPaginada(IApplicationDbContext context)
+        public AcervoMovimentacaoListarPaginadaHandler(IApplicationDbContext context)
         {
             _context = context;
         }

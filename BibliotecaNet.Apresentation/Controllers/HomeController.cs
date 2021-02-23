@@ -17,8 +17,6 @@ namespace BibliotecaNet.Apresentation.Controllers
 
         public async Task<IActionResult> Index()
         {
-        var D=   await Mediator.Send(new AcervoAutorListarPaginadoQuery("ju", 1, 10));
-
             return View();
         }
 

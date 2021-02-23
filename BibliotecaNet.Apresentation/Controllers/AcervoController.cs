@@ -1,10 +1,12 @@
 ﻿using BibliotecaNet.Apresentation.ViewModels.Acervo;
 using BibliotecaNet.Domain.Command;
+using BibliotecaNet.Domain.Query.Acervo;
 using BibliotecaNet.Domain.Query.AcervoAutor;
 using BibliotecaNet.Domain.Query.AcervoCategoria;
 using BibliotecaNet.Domain.Query.AcervoEditora;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace BibliotecaNet.Apresentation.Controllers
@@ -58,6 +60,29 @@ namespace BibliotecaNet.Apresentation.Controllers
             var result = await _mediador.Send(new AcervoCategoriaObterAtivosQuery(term ?? ""));
 
             return Json(result);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ListarAcervos(string search, string sort, string order, int offset, int limit = 10)
+        {
+            var result = await _mediador.Send(new AcervoListarPaginadoQuery(search ?? "", offset, limit));
+
+            return Ok(new
+            {
+                result.Total,
+                result.TotalNotFiltered,
+                rows = result.Select(x => new 
+                {
+                    id = x.Id,
+                    titulo = x.Titulo,
+                    edicao = x.Edicao,
+                    ano = x.Ano,
+                    categoria = x.Categoria,
+                    autor = x.Autor,
+                    editora = x.Editora,
+                    situacao = x.Situacao
+                })
+            });
         }
     }
 }

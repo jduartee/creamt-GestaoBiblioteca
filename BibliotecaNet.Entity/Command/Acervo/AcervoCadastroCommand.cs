@@ -33,17 +33,10 @@ namespace BibliotecaNet.Domain.Command
         public Acervo Command()
             => new Acervo
             {
-                //AcervoId = Id,
+                AcervoId = Id,
                 Titulo = Titulo,
                 Edicao = Edicao,
-                Ano = Ano,
-                AcervoAutor = new Entity.AcervoAutor { AcervoAutorId = AutorId },
-                AcervoEditora = new AcervoEditora { AcervoEditoraId = EditoraId },
-                AcervoCategoria = new AcervoCategoria
-                {
-                    AcervoCategoriaId = CategoriaId
-                }
-                //AcervoSituacao = new AcervoSituacao { AcervoSituacaoId = Common.AcervoSituacaoEnum.Disponivel }
+                Ano = Ano
             };
     }
 }

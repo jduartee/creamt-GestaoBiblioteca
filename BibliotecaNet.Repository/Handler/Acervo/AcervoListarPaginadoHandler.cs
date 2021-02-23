@@ -25,7 +25,8 @@ namespace BibliotecaNet.Repository.Handler
 
         public async Task<PaginatedList<AcervoVO>> Handle(AcervoListarPaginadoQuery request, CancellationToken cancellationToken)
         {
-            var sql = "SELECT * FROM [CREAMT].[DBO].[ACERVOS] WHERE ACERVOID NOT IN (SELECT ACERVOID FROM [CREAMT].[DBO].[ACERVOMOVIMENTACAOS] WHERE DATADEVOLUCAO IS NULL)";
+            //var sql = "SELECT * FROM [CREAMT].[DBO].[ACERVOS] WHERE ACERVOID NOT IN (SELECT ACERVOID FROM [CREAMT].[DBO].[ACERVOMOVIMENTACAOS] WHERE DATADEVOLUCAO IS NULL)";
+            //var acervos = _context.Acervos.FromSqlRaw(sql).Select(x => new AcervoVO { });
 
             var query = (from t0 in _context.Acervos
                          join t1 in _context.AcervoAutors on t0.AcervoAutor.AcervoAutorId equals t1.AcervoAutorId
@@ -33,6 +34,7 @@ namespace BibliotecaNet.Repository.Handler
                          join t3 in _context.AcervoCategorias on t0.AcervoCategoria.AcervoCategoriaId equals t3.AcervoCategoriaId
                          join t4 in _context.AcervoEditoras on t0.AcervoEditora.AcervoEditoraId equals t4.AcervoEditoraId
                          join t5 in _context.AcervoSituacaos on t0.AcervoSituacao.AcervoSituacaoId equals t5.AcervoSituacaoId
+                         where t0.Titulo.Contains(request.Titulo)
                          select new AcervoVO
                          {
                              Id = t0.AcervoId,
@@ -42,11 +44,10 @@ namespace BibliotecaNet.Repository.Handler
                              Autor = t2.Nome,
                              Categoria = t3.Descricao,
                              Editora = t4.Nome,
-                            Situacao = t5.Descricao
+                             Situacao = t5.Descricao
                          });
 
-            var acervos = _context.Acervos.FromSqlRaw(sql).Select(x => new AcervoVO { });
-            return await PaginatedList<AcervoVO>.CreateAsync(acervos, 1, 10);
+            return await PaginatedList<AcervoVO>.CreateAsync(query, request.OffSet, request.Limit);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using BibliotecaNet.Domain.Command;
-using BibliotecaNet.Domain.Query.AcervoCategoria;
+﻿using BibliotecaNet.Domain.Query.AcervoCategoria;
 using BibliotecaNet.Domain.ValueObject.AcervoCategoria;
 using BibliotecaNet.Repository.Interfaces;
 using MediatR;

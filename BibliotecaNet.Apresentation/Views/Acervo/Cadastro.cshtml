@@ -1,0 +1,82 @@
+﻿@model BibliotecaNet.Apresentation.ViewModels.Acervo.AcervoVM
+@{
+}
+
+
+<form id="form" method="post">
+    <h4>Cadastrar usuário</h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-8">
+            <label asp-for="Titulo"></label>
+            <input asp-for="Titulo" class="form-control" />
+            <span asp-validation-for="Titulo" class="text-danger"></span>
+        </div>
+        <div class="col-md-2">
+            <label asp-for="Edicao"></label>
+            <input asp-for="Edicao" class="form-control" />
+            <span asp-validation-for="Edicao" class="text-danger"></span>
+        </div>
+        <div class="col-md-2">
+            <label asp-for="Ano"></label>
+            <input asp-for="Ano" class="form-control" />
+            <span asp-validation-for="Ano" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label>Categoria</label>
+            <select class="form-control" asp-for="CategoriaId">
+            </select>
+            <span asp-validation-for="CategoriaId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label>Editora</label>
+            <select class="form-control" asp-for="EditoraId">
+            </select>
+            <span asp-validation-for="EditoraId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label>Autor</label>
+            <select class="form-control" asp-for="AutorId">
+            </select>
+            <span asp-validation-for="AutorId" class="text-danger"></span>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(function () {
+
+            $('#CategoriaId').select2({
+                ajax: {
+                    url: 'https://api.github.com/search/repositories',
+                    dataType: 'json'
+                    // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+                }
+            });
+
+            $('#EditoraId').select2({
+                ajax: {
+                    url: 'https://api.github.com/search/repositories',
+                    dataType: 'json'
+                    // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+                }
+            });
+
+            $('#AutorId').select2({
+                ajax: {
+                    url: 'BuscarAutorSelect',
+                    dataType: 'json'
+                    
+                    // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+                },
+                delay: 250,
+                minimumInputLength: 3
+            });
+
+        })
+    </script>
+}

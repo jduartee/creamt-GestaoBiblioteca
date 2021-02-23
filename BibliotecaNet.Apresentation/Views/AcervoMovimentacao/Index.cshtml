@@ -41,7 +41,7 @@
     }
 
     function ajaxRequest(params) {
-        var url = '/AcervoMovimentacao/ListarPessoas'
+        var url = '/AcervoMovimentacao/ListarMovimentacoes'
 
         $.get(url + '?' + $.param(params.data)).then(function (res) {
             params.success(res)

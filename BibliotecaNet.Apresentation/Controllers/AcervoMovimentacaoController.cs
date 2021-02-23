@@ -1,6 +1,8 @@
 ﻿using BibliotecaNet.Apresentation.ViewModels.AcervoMovimentacao;
 using BibliotecaNet.Domain.Command.AcervoMovimentacao;
+using BibliotecaNet.Domain.Query.Acervo;
 using BibliotecaNet.Domain.Query.AcervoMovimentacao;
+using BibliotecaNet.Domain.Query.Pessoa;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -36,7 +38,7 @@ namespace BibliotecaNet.Apresentation.Controllers
             return View();
         }
 
-        public async Task<IActionResult> ListarPessoas(string search, string sort, string order, int offset, int limit = 10)
+        public async Task<IActionResult> ListarMovimentacoes(string search, string sort, string order, int offset, int limit = 10)
         {
             var result = await _mediator.Send(new AcervoMovimentacaoListarPaginadaQuery(offset, limit));
 
@@ -47,5 +49,31 @@ namespace BibliotecaNet.Apresentation.Controllers
                 rows = result
             });
         }
+
+        public async Task<IActionResult> ListarPessoas(string term)
+        {
+
+            var result = await _mediator.Send(new PessoaListarPorNomeQuery(term ?? ""));
+
+            return Json(result);
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> BuscarAcervoSelect(string term)
+        {
+            var result = await _mediator.Send(new AcervoListarDisponivelQuery(term ?? ""));
+
+            return Json(result);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> BuscarEditoraSelect(string term)
+        {
+            var result = await _mediator.Send(new PessoaListarPorNomeQuery(term ?? ""));
+
+            return Json(result);
+        }
+
     }
 }

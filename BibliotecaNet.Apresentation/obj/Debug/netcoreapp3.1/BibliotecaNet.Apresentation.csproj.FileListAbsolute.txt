@@ -117,3 +117,4 @@ C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\bin\Debu
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Cadastro.cshtml.g.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Autor\Index.cshtml.g.cs

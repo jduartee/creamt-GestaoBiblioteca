@@ -27,7 +27,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <button type="submit" class="btn btn-primary" style="margin-top:30px">Cadastrar</button>
+            <button type="button" class="btn btn-primary" style="margin-top:30px" onclick="Salvar()">Cadastrar</button>
             <a href="/AcervoMovimentacao" class="btn btn-danger" style="margin-top:30px">Voltar</a>
         </div>
     </div>
@@ -39,9 +39,10 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-
     <script>
         $(function () {
+
+            
 
             $('#AcervoId').select2({
                 ajax: {
@@ -69,8 +70,16 @@
         })
 
         let Salvar = function() {
-            $.post('/AcervoMovimentacao/Cadastro', $("form").serializeObject()).done(function (data) {
-                swal(data)
+            $.post('/AcervoMovimentacao/Cadastro', $('#form').serializeArray()).done(function (data) {
+                Swal.fire({
+                    title: 'Atenção!',
+                    text: data,
+                    icon: 'success'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                       window.location = '/AcervoMovimentacao'
+                    };
+                })
             })
         }
     </script>

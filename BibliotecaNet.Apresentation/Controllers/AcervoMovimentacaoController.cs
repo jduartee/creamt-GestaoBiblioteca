@@ -33,7 +33,7 @@ namespace BibliotecaNet.Apresentation.Controllers
         {
             var retorno = await _mediator.Send(new AcervoMovimentacaoCadastrarCommand(model.AcervoId, model.PessoaId, model.UsuarioId));
 
-            return View();
+            return Ok(retorno);
         }
 
         public async Task<IActionResult> ListarMovimentacoes(string search, string sort, string order, int offset, int limit = 10)

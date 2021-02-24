@@ -11,5 +11,28 @@ namespace BibliotecaNet.Domain.ValueObject.AcervoMovimentacao
         public string DataEmprestimo { get; set; }
         public DateTime? DataPrazoDevolucao { get; set; }
         public DateTime? DataDevolucao { get; set; }
+
+        public string Situacao
+        {
+            get
+            {
+                DateTime emprestimo = Convert.ToDateTime(DataEmprestimo);
+
+                if (DataDevolucao != null)
+                {
+                    return Common.SituacaoEmprestimo.Devolvido.ToString();
+                }
+
+                var dias = (DateTime.Today - emprestimo).Days;
+
+                if(dias > 15)
+                {
+                    return Common.SituacaoEmprestimo.Atrasado.ToString();
+                }
+
+                return Common.SituacaoEmprestimo.Emprestado.ToString();
+            }
+        }
+
     }
 }

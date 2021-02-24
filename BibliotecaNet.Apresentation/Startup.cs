@@ -32,7 +32,7 @@ namespace BibliotecaNet.Apresentation
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
-            services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly,typeof(AcervoCategoriaCadastroHandler).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly, typeof(AcervoCategoriaCadastroHandler).GetTypeInfo().Assembly);
 
 
             IMapper mapper = new AutoMapperConfig().AutoMapperConfiguration().CreateMapper();
@@ -42,6 +42,8 @@ namespace BibliotecaNet.Apresentation
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            InitializeDatabase(app);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -65,6 +67,12 @@ namespace BibliotecaNet.Apresentation
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private void InitializeDatabase(IApplicationBuilder app)
+        {
+            using var scope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope();
+            scope.ServiceProvider.GetRequiredService<ApplicationDbContext>().Database.Migrate();
         }
     }
 }

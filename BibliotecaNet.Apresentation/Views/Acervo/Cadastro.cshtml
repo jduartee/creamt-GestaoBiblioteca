@@ -44,8 +44,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2">
-            <button type="submit" class="btn btn-primary" style="margin-top:30px">Cadastrar</button>
+        <div class="col-md-12">
+            <button type="button" class="btn btn-primary" style="margin-top:30px" onclick="Salvar()">Cadastrar</button>
+            <a href="/Acervo" class="btn btn-danger" style="margin-top:30px">Voltar</a>
         </div>
     </div>
 </form>
@@ -79,7 +80,20 @@
                 },
                 delay: 250
             });
-
         })
+
+        let Salvar = function () {
+            $.post('/Acervo/Cadastro', $('#form').serializeArray()).done(function (data) {
+                Swal.fire({
+                    title: 'Atenção!',
+                    text: data,
+                    icon: 'success'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = '/Acervo'
+                    };
+                })
+            })
+        }
     </script>
 }

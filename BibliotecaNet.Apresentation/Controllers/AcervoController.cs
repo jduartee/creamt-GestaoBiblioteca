@@ -35,7 +35,7 @@ namespace BibliotecaNet.Apresentation.Controllers
         {
             var result = await _mediador.Send(new AcervoCadastroCommand(model.Id, model.Titulo, model.Edicao, model.Ano, model.AutorId, model.EditoraId, model.CategoriaId));
 
-            return View();
+            return Ok(result);
         }
 
         [HttpGet]

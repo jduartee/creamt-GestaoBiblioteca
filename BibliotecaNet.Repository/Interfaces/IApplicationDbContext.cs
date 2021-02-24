@@ -13,6 +13,7 @@ namespace BibliotecaNet.Repository.Interfaces
         DbSet<AcervoMovimentacao> AcervoMovimentacaos { get; set; }
         DbSet<AcervoSituacao> AcervoSituacaos { get; set; }
         DbSet<Pessoa> Pessoas { get; set; }
+        DbSet<PessoaTipo> PessoaTipo { get; set; }
         DbSet<PessoaContato> PessoaContatos { get; set; }
         DbSet<PessoaContatoTipo> PessoaContatoTipos { get; set; }
         DbSet<PessoaDocumento> PessoaDocumentos { get; set; }

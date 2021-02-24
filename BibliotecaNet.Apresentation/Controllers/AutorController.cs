@@ -34,7 +34,7 @@ namespace BibliotecaNet.Apresentation.Controllers
         {
             var command = await _mediator.Send(new AcervoAutorAdicionarCommand(model.Nome));
 
-            return View();
+            return Ok(command);
         }
 
         [HttpGet]

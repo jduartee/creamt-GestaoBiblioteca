@@ -18,6 +18,7 @@ namespace BibliotecaNet.Repository.DbContext
         public DbSet<AcervoMovimentacao> AcervoMovimentacaos { get; set; }
         public DbSet<AcervoSituacao> AcervoSituacaos { get; set; }
         public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<PessoaTipo> PessoaTipo { get; set; }
         public DbSet<PessoaContato> PessoaContatos { get; set; }
         public DbSet<PessoaContatoTipo> PessoaContatoTipos { get; set; }
         public DbSet<PessoaDocumento> PessoaDocumentos { get; set; }

@@ -21,7 +21,7 @@ namespace BibliotecaNet.Repository.Handler
 
         public async Task<IList<AcervoVO>> Handle(AcervoListarDisponivelQuery request, CancellationToken cancellationToken)
         {
-            var sql = "SELECT * FROM [CREAMT].[DBO].[ACERVOS] WHERE ACERVOID NOT IN (SELECT ACERVOID FROM [CREAMT].[DBO].[ACERVOMOVIMENTACAOS] WHERE DATADEVOLUCAO IS NULL)";
+            var sql = $"SELECT * FROM [CREAMT].[DBO].[ACERVOS] WHERE titulo like '{request.Titulo}' and ACERVOID NOT IN (SELECT ACERVOID FROM [CREAMT].[DBO].[ACERVOMOVIMENTACAOS] WHERE DATADEVOLUCAO IS NULL)";
 
             var acervos = await _context.Acervos.FromSqlRaw(sql).ToListAsync();
             return acervos.Select(x => new AcervoVO { }).ToList();

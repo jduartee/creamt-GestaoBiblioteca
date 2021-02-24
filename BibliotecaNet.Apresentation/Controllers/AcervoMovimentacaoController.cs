@@ -3,6 +3,7 @@ using BibliotecaNet.Domain.Command.AcervoMovimentacao;
 using BibliotecaNet.Domain.Query.Acervo;
 using BibliotecaNet.Domain.Query.AcervoMovimentacao;
 using BibliotecaNet.Domain.Query.Pessoa;
+using BibliotecaNet.Domain.Query.Usuario;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace BibliotecaNet.Apresentation.Controllers
         [HttpPost]
         public async Task<IActionResult> Cadastro(AcervoMovimentacaoVM model)
         {
-            var retorno = await _mediator.Send(new AcervoMovimentacaoCadastrarCommand(model.Id, model.PessoaId, model.UsuarioId));
+            var retorno = await _mediator.Send(new AcervoMovimentacaoCadastrarCommand(model.AcervoId, model.PessoaId, model.UsuarioId));
 
             return View();
         }
@@ -47,6 +48,7 @@ namespace BibliotecaNet.Apresentation.Controllers
             });
         }
 
+        [HttpGet]
         public async Task<IActionResult> ListarPessoas(string term)
         {
 
@@ -64,9 +66,9 @@ namespace BibliotecaNet.Apresentation.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> BuscarEditoraSelect(string term)
+        public async Task<IActionResult> BuscarFuncionarioSelect(string term)
         {
-            var result = await _mediator.Send(new PessoaListarPorNomeQuery(term ?? ""));
+            var result = await _mediator.Send(new UsuarioListarPorNomeQuery(term ?? ""));
 
             return Json(result);
         }

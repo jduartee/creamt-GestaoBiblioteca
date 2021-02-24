@@ -29,7 +29,7 @@ namespace BibliotecaNet.Repository.Handler
                          join t3 in _context.Usuarios on t0.Usuario.Id equals t3.Id
                          join t4 in _context.Pessoas on t3.Pessoa.PessoaId equals t4.PessoaId
                          select new AcervoMovimentacaoVO
-                         { Id = t0.AcervoMovimentacaoId, Acervo = t1.Titulo, Pessoa = t2.Nome, Usuario = t4.Nome, });
+                         { Id = t0.AcervoMovimentacaoId, Acervo = t1.Titulo, Pessoa = t2.Nome, Usuario = t4.Nome, DataEmprestimo = t0.DataEmprestimo.ToShortDateString() });
 
             return await PaginatedList<AcervoMovimentacaoVO>.CreateAsync(query, request.OffSet, request.Limit);
         }

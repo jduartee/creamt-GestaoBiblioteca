@@ -1,12 +1,9 @@
-﻿using BibliotecaNet.Domain.ValueObject.Acervo;
+﻿using BibliotecaNet.Domain.ValueObject;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BibliotecaNet.Domain.Query.Acervo
 {
-    public class AcervoListarDisponivelQuery : IRequest<IList<AcervoVO>>
+    public class AcervoListarDisponivelQuery : IRequest<RequestSelectVO>
     {
         public AcervoListarDisponivelQuery(string titulo)
         {

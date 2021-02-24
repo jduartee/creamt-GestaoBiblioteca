@@ -26,8 +26,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-12">
             <button type="submit" class="btn btn-primary" style="margin-top:30px">Cadastrar</button>
+            <a href="/AcervoMovimentacao" class="btn btn-danger" style="margin-top:30px">Voltar</a>
         </div>
     </div>
 </form>
@@ -44,7 +45,7 @@
 
             $('#AcervoId').select2({
                 ajax: {
-                    url: 'BuscarCategoriaSelect',
+                    url: 'BuscarAcervoSelect',
                     dataType: 'json'
                 },
                 delay: 250
@@ -52,7 +53,7 @@
 
             $('#PessoaId').select2({
                 ajax: {
-                    url: 'BuscarEditoraSelect',
+                    url: 'ListarPessoas',
                     dataType: 'json'
                 },
                 delay: 250
@@ -60,12 +61,17 @@
 
             $('#UsuarioId').select2({
                 ajax: {
-                    url: 'BuscarAutorSelect',
+                    url: 'BuscarFuncionarioSelect',
                     dataType: 'json'
                 },
                 delay: 250
             });
-
         })
+
+        let Salvar = function() {
+            $.post('/AcervoMovimentacao/Cadastro', $("form").serializeObject()).done(function (data) {
+                swal(data)
+            })
+        }
     </script>
 }

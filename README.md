@@ -10,7 +10,7 @@ App para gestão de biblioteca
   - Cadastro de Movimentação.
   - Devolução de Acervo.
 
-# Tecnologias  e Ferramentas Utilizados!
+# Tecnologias  e Ferramentas Utilizadas!
 
   - .NET Core 3.2
   - Entity Framework Core 3.1.11

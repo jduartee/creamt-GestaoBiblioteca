@@ -10,6 +10,7 @@ namespace BibliotecaNet.Apresentation.ViewModels.Acervo
         public int Id { get; set; }
         public string Titulo { get; set; }
         public string Edicao { get; set; }
+        public string Isbn { get; set; }
         public int Ano { get; set; }
         public int AutorId { get; set; }
         public int EditoraId { get; set; }

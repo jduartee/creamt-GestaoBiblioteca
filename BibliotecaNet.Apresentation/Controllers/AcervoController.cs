@@ -33,7 +33,7 @@ namespace BibliotecaNet.Apresentation.Controllers
         [HttpPost]
         public async Task<IActionResult> Cadastro(AcervoVM model)
         {
-            var result = await _mediador.Send(new AcervoCadastroCommand(model.Id, model.Titulo, model.Edicao, model.Ano, model.AutorId, model.EditoraId, model.CategoriaId));
+            var result = await _mediador.Send(new AcervoCadastroCommand(model.Id, model.Titulo, model.Edicao, model.Isbn, model.Ano, model.AutorId, model.EditoraId, model.CategoriaId));
 
             return Ok(result);
         }
@@ -71,7 +71,7 @@ namespace BibliotecaNet.Apresentation.Controllers
             {
                 result.Total,
                 result.TotalNotFiltered,
-                rows = result.Select(x => new 
+                rows = result.Select(x => new
                 {
                     id = x.Id,
                     titulo = x.Titulo,

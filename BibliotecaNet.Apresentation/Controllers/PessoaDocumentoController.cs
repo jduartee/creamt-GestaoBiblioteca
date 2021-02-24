@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BibliotecaNet.Apresentation.ViewModels.PessoaDocumento;
 using BibliotecaNet.Domain.Command.PessoaDocumentoTipo;
+using BibliotecaNet.Domain.Query.PessoaDocumentoTipo;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -36,7 +37,20 @@ namespace BibliotecaNet.Apresentation.Controllers
         {
             var command = await _mediator.Send(new PessoaDocumentoTipoAdicionarCommand(model.Descricao, model.Mascara, model.Obrigatorio, true, _mapper));
 
-            return View();
+            return Ok(command);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Listar(string search, string sort, string order, int offset, int limit = 10)
+        {
+            var result = await _mediator.Send(new PessoaDocumentoTipoListarPaginadoQuery(offset, limit));
+
+            return Ok(new
+            {
+                result.Total,
+                result.TotalNotFiltered,
+                rows = result
+            });
         }
     }
 }

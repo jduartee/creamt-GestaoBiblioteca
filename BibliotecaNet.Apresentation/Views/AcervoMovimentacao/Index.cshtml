@@ -19,7 +19,7 @@
                     <th data-field="usuario">Funcionario</th>
                     <th data-field="dataEmprestimo">Data de Emprestimo</th>
                     <th data-field="dataPrazoDevolucao">limite de Devolução</th>
-                    <th data-field="dataDevolucao">Data Prazo</th>
+                    <th data-field="dataDevolucao">Data Devolução</th>
                     <th data-field="situacao">Situação</th>
                     <th data-field="" data-formatter="exibirIconesGrid">Exibir consulta</th>
                 </tr>
@@ -32,6 +32,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
 <script type="text/javascript">
+
 
     function exibirIconesGrid(value, row) {
         return `<a class="btn" href='#/AcervoMovimentacao/Cadastro/${row.id}' >

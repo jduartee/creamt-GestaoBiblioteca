@@ -9,8 +9,14 @@ namespace BibliotecaNet.Domain.ValueObject.AcervoMovimentacao
         public string Pessoa { get; set; }
         public string Usuario { get; set; }
         public string DataEmprestimo { get; set; }
-        public DateTime? DataPrazoDevolucao { get; set; }
         public DateTime? DataDevolucao { get; set; }
+        public string DataPrazoDevolucao
+        {
+            get
+            {
+                return Convert.ToDateTime(DataEmprestimo).AddDays(15).ToShortDateString();
+            }
+        }
 
         public string Situacao
         {
@@ -25,7 +31,7 @@ namespace BibliotecaNet.Domain.ValueObject.AcervoMovimentacao
 
                 var dias = (DateTime.Today - emprestimo).Days;
 
-                if(dias > 15)
+                if (dias > 15)
                 {
                     return Common.SituacaoEmprestimo.Atrasado.ToString();
                 }

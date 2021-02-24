@@ -21,9 +21,28 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2">
-            <button type="submit" class="btn btn-primary" style="margin-top:30px">Cadastrar</button>
+        <div class="col-md-12">
+            <button type="button" class="btn btn-primary" style="margin-top:30px" onclick="Salvar()">Cadastrar</button>
+            <a href="/PessoaDocumento/Index" class="btn btn-danger" style="margin-top:30px">Voltar</a>
         </div>
     </div>
 
 </form>
+
+@section Scripts {
+    <script>
+    let Salvar = function () {
+        $.post('/PessoaDocumento/Cadastro', $('#form').serializeArray()).done(function (data) {
+            Swal.fire({
+                title: 'Atenção!',
+                text: data,
+                icon: 'success'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location = '/PessoaDocumento'
+                };
+            })
+        })
+    }
+    </script>
+}

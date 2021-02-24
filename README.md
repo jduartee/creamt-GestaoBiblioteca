@@ -5,6 +5,7 @@ App para gestão de biblioteca
 
   - Cadastro de Usuários.
   - Cadastro de Acervo.
+  - Cadastro de Autor
   - Cadastro de Pessoas.
   - Cadastro de Movimentação.
   - Devolução de Acervo.

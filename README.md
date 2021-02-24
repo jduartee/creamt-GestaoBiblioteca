@@ -16,6 +16,9 @@ App para gestão de biblioteca
   - Entity Framework Identity 3.1.11
   - Auto Mapper
   - Mediatr 
+  - Select2js
+  - BootstrapTable
+  - Bootstrap
   - Visual Studio 2019
   
   

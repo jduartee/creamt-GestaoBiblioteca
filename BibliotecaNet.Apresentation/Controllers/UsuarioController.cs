@@ -1,5 +1,6 @@
 ﻿using BibliotecaNet.Apresentation.ViewModels.Usuario;
 using BibliotecaNet.Domain.Command.Usuario;
+using BibliotecaNet.Domain.Query.Usuario;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -21,9 +22,20 @@ namespace BibliotecaNet.Apresentation.Controllers
             return View();
         }
 
-        public IActionResult Cadastro()
+        public async Task<IActionResult> Cadastro(int? id)
         {
-            return View();
+            UsuarioVM model = new UsuarioVM();
+
+
+            if (id.GetValueOrDefault() > 0)
+            {
+                var usuario = await _mediator.Send(new UsuarioObterPorIdQuery(id.GetValueOrDefault()));
+
+                model.Email = usuario.Email;
+                model.UserName = usuario.Nome;
+            }
+
+            return View(model);
         }
 
         [HttpPost]
@@ -32,6 +44,18 @@ namespace BibliotecaNet.Apresentation.Controllers
             var retorno = await _mediator.Send(new UsuarioCadastrarCommand(model.Email, model.Password, model.UserName));
 
             return Ok(retorno);
+        }
+
+        public async Task<IActionResult> ListarUsuario(string search, string sort, string order, int offset, int limit = 10)
+        {
+            var result = await _mediator.Send(new UsuarioListarPaginadoQuery(offset, limit));
+
+            return Ok(new
+            {
+                result.Total,
+                result.TotalNotFiltered,
+                rows = result
+            });
         }
     }
 }

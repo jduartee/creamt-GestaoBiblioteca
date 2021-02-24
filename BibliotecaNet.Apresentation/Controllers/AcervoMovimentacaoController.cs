@@ -5,9 +5,6 @@ using BibliotecaNet.Domain.Query.AcervoMovimentacao;
 using BibliotecaNet.Domain.Query.Pessoa;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace BibliotecaNet.Apresentation.Controllers
@@ -56,7 +53,6 @@ namespace BibliotecaNet.Apresentation.Controllers
             var result = await _mediator.Send(new PessoaListarPorNomeQuery(term ?? ""));
 
             return Json(result);
-
         }
 
         [HttpGet]

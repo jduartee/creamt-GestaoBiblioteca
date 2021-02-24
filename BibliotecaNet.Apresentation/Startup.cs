@@ -1,4 +1,5 @@
 using AutoMapper;
+using BibliotecaNet.Domain.Entity;
 using BibliotecaNet.Domain.Infra;
 using BibliotecaNet.Repository.DbContext;
 using BibliotecaNet.Repository.Handler;
@@ -29,7 +30,7 @@ namespace BibliotecaNet.Apresentation
             services.AddControllersWithViews();
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
+            services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
             services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly,typeof(AcervoCategoriaCadastroHandler).GetTypeInfo().Assembly);
 

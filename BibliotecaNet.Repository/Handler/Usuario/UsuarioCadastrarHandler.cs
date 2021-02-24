@@ -26,6 +26,9 @@ namespace BibliotecaNet.Repository.Handler
 
             var result = await _userManager.CreateAsync(user, request.Password);
 
+            if (!result.Succeeded)
+                return string.Join("\n", result.Errors);
+
             return "Cadastro realizado com cucesso";
         }
     }

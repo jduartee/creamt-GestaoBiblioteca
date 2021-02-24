@@ -1,4 +1,5 @@
 ﻿using BibliotecaNet.Apresentation.Models;
+using BibliotecaNet.Domain.Command.Usuario;
 using BibliotecaNet.Domain.Query.AcervoAutor;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,8 @@ namespace BibliotecaNet.Apresentation.Controllers
 
         public async Task<IActionResult> Index()
         {
+            var retorno = await Mediator.Send(new UsuarioCadastrarCommand("julianoduartetm@gmail.com", "@Qw123456"));
+
             return View();
         }
 

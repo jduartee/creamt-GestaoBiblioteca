@@ -109,3 +109,9 @@ C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debu
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\Pessoa\Index.cshtml.g.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\AcervoMovimentacao\Index.cshtml.g.cs
 C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\obj\Debug\netcoreapp3.1\Razor\Views\AcervoMovimentacao\Cadastro.cshtml.g.cs
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\bin\Debug\netcoreapp3.1\BibliotecaNet.Apresentation.StaticWebAssets.xml
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Squadra\source\repos\BibliotecaNet\BibliotecaNet.Apresentation\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll

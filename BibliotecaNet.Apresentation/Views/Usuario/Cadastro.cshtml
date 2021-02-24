@@ -1,0 +1,40 @@
+﻿@model BibliotecaNet.Apresentation.ViewModels.Usuario.UsuarioVM
+
+<form id="form" method="post">
+    <h4>Cadastrar usuário</h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="UserName"></label>
+            <input asp-for="UserName" class="form-control" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary" style="margin-top:30px">Cadastrar</button>
+            <a href="Index" class="btn btn-primary" style="margin-top:30px">Voltar</a>
+
+        </div>
+    </div>
+</form>
